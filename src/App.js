@@ -15,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          React／AWS EC2／Github Action
+          React／AWS EC2／Github Action Project
         </a>
       </header>
     </div>
