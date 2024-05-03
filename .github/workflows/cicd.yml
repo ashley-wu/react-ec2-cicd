@@ -16,14 +16,14 @@ jobs:
       - name: Build Docker Image
         run: docker build -t ashleywpc/react-ec2-cicd .
       - name: Publish image to docker Hub
-        run: docker push ashleywpc/react-ec2-cicd
+        run: docker push ashleywpc/react-ec2-cicd:latest
   
   deploy:
     needs: build
     runs-on: self-hosted
     steps:
       - name: Pull image from docker hub
-        run: docker pull ashleywpc/react-ec2-cicd
+        run: docker pull ashleywpc/react-ec2-cicd:latest
       - name: Delete old container
         run: docker rm -f reactContainer
       - name: Run docker container
